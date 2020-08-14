@@ -1,0 +1,64 @@
+/**
+ * RESUMEN
+ *
+ * Este archivo maneja el layout del sitio web. En lugar de configurar
+ * los componentes del layout uno por uno, creamos un sistema separado
+ * que sólo tiene un objetivo: decirle a cada elemento qué tamaño
+ * debe tener y dónde debe aparecer.
+ *
+ * Las clases declaradas aquí pueden ser invocadas en cualquier container
+ * para que sean del tamaño correcto y se comporten de la manera correcta.
+ */
+
+
+/**
+ * TABLA DE CONTENIDOS 
+ *
+ * LAYOUT
+ * Elementos.................Las reglas de tamaños de los containers.
+ * Modificadores..............Las reglas que modifican al layout; ej. floats.
+ *
+ * HELPERS
+ * Clearfix...............Una class que puede ser invocada en containers floated.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #LAYOUT
+\*------------------------------------*/
+
+/**
+ * 1. Si necesitas hacer float a un elemento, estas clases son para ti.
+ * No olvides invocar la class .clearfix, 
+ * de la sección HELPERS, en el container.
+ */
+
+ .layout__item--full-width           { width: 100%; }
+
+ .layout__item--50-percent           { width: 50%; }
+ 
+ 
+ .layout__item--full-height-w-footer { min-height: calc(100vh - 11.1111vh); }
+ 
+ 
+ .layout__item--floated-left  { float: left; } /* [1] */
+ 
+ .layout__item--floated-right { float: right; }/* [1] */
+ 
+ 
+ 
+ 
+ 
+ /*------------------------------------*\
+   #HELPERS
+ \*------------------------------------*/
+ 
+ .clearfix:after {
+   content:  "";
+   display:  table;
+   clear:    both;
+ }
+ 
